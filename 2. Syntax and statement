@@ -1,0 +1,21 @@
+* In a programming language, these programming instructions are called statements.
+  A JavaScript program is a list of programming statements.
+  
+Example 1:
+let a, b, c;     ----->  Statement 1
+a = 5;           ----->  Statement 2
+b = 6;           ----->  Statement 3
+c = a * b;       ----->  Statement 4
+
+Here , each line is a statement that represent the line of code with some meaning in it, On statement one we declaired the variable a,b and c .
+on statement 2 and 3 , we have assign numeric value to the variable a and b , and statement 4 is holding the value of variable c which the produch of a and b.
+thus , each line of code is considered as statement.
+
+Example 2:
+
+var x,y; ------( Var is also can be use to initialize variable)
+let x, y;
+x = 5 + 6;
+y = x * 10;
+
+With the above understanding we have 4 statement in example 2.  calculating result of would be y= 110 .

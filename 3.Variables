@@ -32,3 +32,35 @@ In  example, x, y, and z, are variables, which need to be declared with the keyw
               The variable z is declared with the let keyword. This is a value that can be changed.
               
 Learning - " Varible declaired with keyword const , variable value cannot be change  , whereas variable declaired using let ,value can be change depending on the input/logic"
+
+
+
+****************************************  Practicing the stuffs *************************************************
+
+
+1. <code snippet>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Checking Variable</h2>
+<p id="vishal"></p>
+<script>
+let  x = 10;
+// Here x is 10
+
+{  
+  let x = 2;
+  // Here x is 2
+}
+
+// Here x is 10
+document.getElementById("vishal").innerHTML = x;
+</script>
+</body>
+</html>
+
+
+Output : -- As we iniatially declaired x = 10 , output will be 10.
+
+If we use const inialially then reaassign would not be possible . 

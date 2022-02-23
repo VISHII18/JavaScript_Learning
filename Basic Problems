@@ -1,0 +1,9 @@
+Problem 1: Javascript code to replace every character in the string with the next alphabet .
+
+*************** Solution *****************************
+const moveCharForward = (str)=> 
+str 
+.split('')
+.map = (chr=> String.fromCharCode(chr.charCodeAt(0)+1))
+.join('');
+console.log(moveCharForward('abcdef'));

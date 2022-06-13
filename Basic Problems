@@ -7,3 +7,254 @@ str
 .map = (chr=> String.fromCharCode(chr.charCodeAt(0)+1))
 .join('');
 console.log(moveCharForward('abcdef'));
+
+
+
+Problem 2 :  Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.
+
+*************** Solution *****************************
+var side1 = 5; 
+var side2 = 6; 
+var side3 = 7; 
+var s = (side1 + side2 + side3)/2;
+var area =  Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+console.log(area);
+
+
+
+problem 3 : Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar
+
+*************** Solution *****************************
+
+function leapyear(year)
+{
+return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+console.log(leapyear(2016));
+console.log(leapyear(2000));
+console.log(leapyear(1700));
+console.log(leapyear(1800));
+console.log(leapyear(100));
+
+
+problem 5 : Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number.
+If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched"
+
+*************** Solution *****************************
+// Get a random integer from 1 to 10 inclusive
+ const num = Math.ceil(Math.random() * 10);
+console.log(num);
+ const gnum = prompt('Guess the number between 1 and 10 inclusive');
+ if (gnum == num)
+   console.log('Matched');
+  else
+   console.log('Not matched, the number was '+gnum);
+   
+
+Problem 6 :Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+
+*************** Solution *****************************
+
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divideBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+
+
+Problem 7 : Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+[ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
+
+*************** Solution *****************************
+
+function cToF(celsius) 
+{
+  var cTemp = celsius;
+  var cToFahr = cTemp * 9 / 5 + 32;
+  var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+    console.log(message);
+}
+
+function fToC(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToCel = (fTemp - 32) * 5 / 9;
+  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+    console.log(message);
+} 
+cToF(60);
+fToC(45);
+
+
+
+problem 8 : . Write a JavaScript program to display the current day and time in the following format.
+
+*************** Solution *****************************
+var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  console.log("Today is : " + daylist[day] + ".");
+  var hour = today.getHours();
+  var minute = today.getMinutes();
+  var second = today.getSeconds();
+  var prepand = (hour >= 12)? " PM ":" AM ";
+  hour = (hour >= 12)? hour - 12: hour;
+  if (hour===0 && prepand===' PM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Noon';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' PM';
+  } 
+  } 
+  if (hour===0 && prepand===' AM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Midnight';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' AM';
+  } 
+  } 
+console.log("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+
+
+Problem 9 :  Write a JavaScript exercise to get the extension of a filename.
+
+*************** Solution *****************************
+
+filename = "system.php"
+console.log(filename.split('.').pop());
+filename = "abc.js"
+console.log(filename.split('.').pop());
+
+
+Problem 10 : Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum. 
+
+*************** Solution *****************************
+
+function sumTriple (x, y) {
+  if (x == y) {
+    return 3 * (x + y);
+    } 
+   else
+   {
+    return (x + y);
+   }
+ }
+console.log(sumTriple(10, 20));
+console.log(sumTriple(10, 10));
+
+Problem 11 : Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50
+
+*************** Solution *****************************
+
+function test50(x, y) 
+{
+  return ((x == 50 || y == 50) || (x + y == 50));
+}
+console.log(test50(50, 50))
+console.log(test50(20, 50))
+console.log(test50(20, 20))
+console.log(test50(20, 30))
+
+
+Problem 12 : Write a JavaScript program to remove a character at the specified position of a given string and return the new string
+
+*************** Solution *****************************
+
+function remove_character(str, char_pos) 
+ {
+  part1 = str.substring(0, char_pos);
+  part2 = str.substring(char_pos + 1, str.length);
+  return (part1 + part2);
+ }
+
+console.log(remove_character("Python",0));
+console.log(remove_character("Python",3));
+console.log(remove_character("Python",5));
+
+
+Problem 13 :Write a JavaScript program to find the largest of three given integers.
+
+*************** Solution *****************************
+
+function max_of_three(x, y, z) 
+ {
+  max_val = 0;
+  if (x > y)
+  {
+    max_val = x;
+  } else
+  {
+    max_val = y;
+  }
+  if (z > max_val) 
+  {
+    max_val = z;
+  }
+  return max_val;
+}
+
+console.log(max_of_three(1,0,1));
+console.log(max_of_three(0,-10,-20));
+console.log(max_of_three(1000,510,440));
+
+
+Problem 15 : Write a program to check whether a specified character exists within the 2nd to 4th position in a given string.
+
+*************** Solution *****************************
+
+function check_char(str1, char)
+ {
+  ctr = 0;
+  for (let i = 0; i < str1.length; i++)
+  {
+    if ((str1.charAt(i) == char) && (i >= 1 && i <= 3))--- (Condition to check between 1 to 3)
+    {
+        ctr=1;
+        break;
+    }
+   }
+   if (ctr==1) return true;
+   return false;
+}
+console.log(check_char("Python", "y"));
+console.log(check_char("JavaScript", "a"));
+console.log(check_char("Console", "o"));
+console.log(check_char("Console", "C"));
+console.log(check_char("Console", "e"));
+console.log(check_char("JavaScript", "S"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

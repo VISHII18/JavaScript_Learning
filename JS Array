@@ -1,0 +1,21 @@
+* What is array ?
+
+-An array is a special variable, which can hold more than one value:
+- An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+**************************Creating an Array **********************************
+
+const array_name = [item1, item2, ...];     --(speciafy array name and values needed to be added in the array list )
+
+
+Example :- 
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+const cars = new Array("Saab", "Volvo", "BMW");
+
+Specifies that ,
+
+const cars = [];  -- array created for storing values of car
+cars[0]= "Saab";  -- value store at position 1 i.e. index 0.
+cars[1]= "Volvo";
+cars[2]= "BMW";
